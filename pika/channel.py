@@ -931,7 +931,7 @@ class Channel(object):
         :type body: str or unicode
 
         """
-        if not self.callbacks.process(self.channel_number, '_on_return',
+        if not self.callbacks.process(self.channel_number, '_on_return',self,
                                       (self, method_frame.method,
                                        header_frame.properties,
                                        body)):
